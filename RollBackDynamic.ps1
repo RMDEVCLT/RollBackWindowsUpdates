@@ -1,4 +1,4 @@
-
+# RollBack Windows Patching. Must be save localy to run.
 Function Get-2ndTuesdayOfMonth { 
     Param (
         [Parameter(Mandatory = $true)][ValidateSet("First", "Second", "Third", "Fourth", "Last", "1", "2", "3", "4", "5")][string]$Find,
