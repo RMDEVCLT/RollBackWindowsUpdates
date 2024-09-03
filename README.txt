@@ -5,10 +5,11 @@ Things to know:
 - It cannot be run 2x by default. 
 - It cannot remove servicing stack locked down by Microsoft. 
 
-
-1) Download the file to C:\temp\RollbackDynamic.ps1
-2) Open Powershell as the Administrator and Navidate to C:\Scripts.
-3) Run the script:   .\RollBackDynamic.ps1
+HOW TO USE IT:
+1) Download the file to C:\temp\RollbackDynamic.ps1 (Doesn't really matter where you put it)
+2) Open Powershell CLI as the Administrator and Navidate to C:\Scripts.
+3) Run the script:   .\RollBackDynamic.ps1.
+Sample output.
 [hvserver]: PS C:\script> dir
 
 
@@ -26,13 +27,13 @@ Mode                LastWriteTime         Length Name
 [hvserver]: PS C:\script> .\RollBackDynamic.ps1
 Transcript started, output file is C:\script\rollbackLog.txt
 New Timestamp:
-09/03/2024
+08/16/2024
 --------------------------------------------------------
-This month's tuesday is :  9/10/2024
+This month's tuesday is :  08/13/2024
 --------------------------------------------------------
-Last month's tuesday is :  8/13/2024
+Last month's tuesday is :  07/09/2024
 --------------------------------------------------------
-Today's date is :  9/3/2024
+Today's date is :  08/16/2024
 --------------------------------------------------------
 Last Time Ran :
 --------------------------------------------------------
@@ -43,7 +44,7 @@ Path exists!
 Building Code Execution...
 --------------------------------------------------------
 The date is less than this month's tuesday
-Days to Rollback :  21
+Days to Rollback :  03
 CodeBuild completed...
 --------------------------------------------------------
 Here's the Code that will be executed
@@ -58,7 +59,7 @@ dism /Online /Remove-Package /PackageName:Package_for_ServicingStack_6174~31bf38
 [hvserver]: PS C:\script> .\RollBackDynamic.ps1
 Transcript started, output file is C:\script\rollbackLog.txt
 The date is less than this month's tuesday
-Days to Rollback :  21
+Days to Rollback :  03
 you will accidentally roll back another month .... wait another month
 Unable to Rollback
 Transcript stopped, output file is C:\script\rollbackLog.txt
