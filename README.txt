@@ -3,7 +3,7 @@ Dynamic Roll Back for Windows Updates.
 Things to know: 
 - It will search and identify what has been installed between the 2nd tuesday of the month and the previous 2nd tuesday of the month. 
 - It cannot be run 2x by default. 
-- It cannot remove servicing stack locked down by Microsoft. 
+- It cannot remove servicing stack this is locked down by Microsoft. 
 
 HOW TO USE IT:
 1) Download the file to C:\temp\RollbackDynamic.ps1 (Doesn't really matter where you put it)
