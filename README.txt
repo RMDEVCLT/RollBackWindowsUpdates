@@ -6,7 +6,7 @@ Things to know:
 - It cannot remove servicing stack this is locked down by Microsoft. 
 
 HOW TO USE IT:
-1) Download the file to C:\temp\RollbackDynamic.ps1 (Doesn't really matter where you put it)
+1) Download the file to C:\Scripts\RollbackDynamic.ps1 (Doesn't really matter where you put it)
 2) Open Powershell CLI as the Administrator and Navidate to C:\Scripts.
 3) Run the script:   .\RollBackDynamic.ps1.
 Sample output.
