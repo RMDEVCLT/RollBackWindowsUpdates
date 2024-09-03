@@ -1,10 +1,14 @@
 # RollBackWindowsUpdates
-Roll Back Windows Updates.
+Dynamic Roll Back for Windows Updates.
+Things to know: 
+- It will search and identify what has been installed between the 2nd tuesday of the month and the previous 2nd tuesday of the month. 
+- It cannot be run 2x by default. 
+- It cannot remove servicing stack locked down by Microsoft. 
 
 
-*) Download the file to C:\temp\RollbackDynamic.ps1
-*) Open Powershell as the Administrator and Navidate to C:\Scripts.
-*) Run the script:   .\RollBackDynamic.ps1
+1) Download the file to C:\temp\RollbackDynamic.ps1
+2) Open Powershell as the Administrator and Navidate to C:\Scripts.
+3) Run the script:   .\RollBackDynamic.ps1
 [hvserver]: PS C:\script> dir
 
 
@@ -18,7 +22,7 @@ Mode                LastWriteTime         Length Name
 
 [hvserver]: PS C:\script> .\RollBackDynamic.ps1
 
-*) Roll back will output something like this:
+4) Roll back will output something like this:
 [hvserver]: PS C:\script> .\RollBackDynamic.ps1
 Transcript started, output file is C:\script\rollbackLog.txt
 New Timestamp:
@@ -49,7 +53,7 @@ dism /Online /Remove-Package /PackageName:Package_for_RollupFix~31bf3856ad364e35
 dism /Online /Remove-Package /PackageName:Package_for_ServicingStack_6174~31bf3856ad364e35~amd64~~17763.6174.1.2 /NoRestart
 
 
-*) Safety mechanism added to the script. to Prevent multiple runs, if you want to re-run it you can delete the following log located in the same directory of the script, "thisMonthTimestamp.log" if you do not you will get the following message
+5) Safety mechanism added to the script. to Prevent multiple runs, if you want to re-run it you can delete the following log located in the same directory of the script, "thisMonthTimestamp.log" if you do not you will get the following message
 
 [hvserver]: PS C:\script> .\RollBackDynamic.ps1
 Transcript started, output file is C:\script\rollbackLog.txt
